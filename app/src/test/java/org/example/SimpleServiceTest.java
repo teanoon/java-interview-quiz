@@ -5,16 +5,25 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment = WebEnvironment.NONE)
 public class SimpleServiceTest {
 
-    private SimpleService service = new SimpleService();
+    @Autowired
+    private SimpleService service;
 
     @Test
     public void canFillGapSuccess() {
         assertTrue(service.canFillGap(3, 1, 9));
         assertFalse(service.canFillGap(4, 1, 8));
         assertTrue(service.canFillGap(3, 2, 10));
+        assertTrue(service.canFillGap(5, 1, 10));
     }
 
     @Test
