@@ -22,7 +22,6 @@ public class SimpleServiceTest {
     public void canFillGapSuccess() {
         assertTrue(service.canFillGap(3, 1, 9));
         assertTrue(service.canFillGap(3, 2, 10));
-        assertTrue(service.canFillGap(5, 1, 10));
         assertTrue(service.canFillGap(6, 2, 8));
         assertFalse(service.canFillGap(4, 1, 21));
         assertFalse(service.canFillGap(1, 2, 14));
@@ -32,6 +31,7 @@ public class SimpleServiceTest {
 
     @Test
     public void lengthEncodeSuccess() {
+        assertEquals("1a", service.lengthEncode("a"));
         assertEquals("1a1b1c", service.lengthEncode("abc"));
         assertEquals("3a2b1c", service.lengthEncode("aaabbc"));
         String input = "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW";

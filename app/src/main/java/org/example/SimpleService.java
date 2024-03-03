@@ -32,7 +32,7 @@ public class SimpleService {
      * 如 aabb -> 2a2b
      */
     public String lengthEncode(String input) {
-        return null;
+        return "";
     }
 
     /**
