@@ -28,7 +28,8 @@ public class SimpleService {
     }
 
     /**
-     * 给定一个字符串，返回一个新的字符串，其中每个字符都是原始字符串中该字符的长度编码。
+     * 给定一个字符串，返回一个多组字符串组成的新字符串，其中每组字符都是原始字符串中对应字符的长度+字符。
+     * 如 aabb -> 2a2b
      */
     public String lengthEncode(String input) {
         return null;
