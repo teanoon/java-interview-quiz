@@ -11,7 +11,7 @@ public class SimpleService {
     /**
      * 使用大小砖填充空隙，判断给定数量的大小砖是否能刚好填满。
      *
-     * 不能打碎砖块
+     * 不能打碎砖块，不要求使用全部的砖块
      */
     boolean canFillGap(int smallQuantity, int bigQuantity, int totalGap) {
         int maxBigRequired = totalGap / BIG_BRICK_SIZE;

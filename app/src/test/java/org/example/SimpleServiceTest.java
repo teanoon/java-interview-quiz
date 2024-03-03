@@ -21,9 +21,13 @@ public class SimpleServiceTest {
     @Test
     public void canFillGapSuccess() {
         assertTrue(service.canFillGap(3, 1, 9));
-        assertFalse(service.canFillGap(4, 1, 8));
         assertTrue(service.canFillGap(3, 2, 10));
         assertTrue(service.canFillGap(5, 1, 10));
+        assertTrue(service.canFillGap(6, 2, 8));
+        assertFalse(service.canFillGap(4, 1, 21));
+        assertFalse(service.canFillGap(1, 2, 14));
+        assertFalse(service.canFillGap(2, 2, 8));
+        assertFalse(service.canFillGap(3, 1, 12));
     }
 
     @Test
